@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Abertura de Ticket</title>
+     <!-- Aqui chamamos o nosso arquivo css externo -->
+    <link rel="stylesheet" type="text/css"  href="css/chamado.css"/>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <div class="menu-painel">
+		        <li><a href="home.html">Home</a></li>
+		    <li><a href="#">Painel</a>
+            <ul>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Usuários</a></li>
+            </ul>
+        </li>
+		    <li><a href="#">Tickets</a>
+                <ul>
+                    <li><a href="#">Aberto</a></li>
+                    <li><a href="#">Fechado</a></li>
+                    <li><a href="#">Análise</a></li>
+                    <li><a href="NovoTick.html">Novo Tick</a></li></ul>
+            </li>
+		    <li><a href="#">Sobre</a></li>
+            <li><a href="main.html">Sair</a></li>
+        </div>
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div class="cabecalho-chamado">
+            <div class="centro-cabecalho"></div>
+                <h1 id="titulo">Abertura de chamado</h1>
+        </div>
+        <!-- Início do formulário -->
+        <form>
+            <fieldset class="grupo-usuario">
+                <p id="subtitulo">Insira as informações de Usuário</p>
+                <!-- Campo do nome completo do usuário -->
+                <div class="campo1">
+                    <label for="nome"><strong>Nome Completo:</strong></label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+
+                 <!-- Campo de email -->
+            <div class="campo2">
+                <label for="email"><strong>Endereço de E-mail: </strong></label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+                <div class="campo3">
+                    <label for="DepartamentoUsuario"><strong>Departamento: </strong></label>
+                    <select id="DepartamentoUsuario" required>
+                        <option selected disabled value="">Selecione</option>
+                        <option>Financeiro</option>
+                        <option>Administração</option>
+                        <option>Recursos Humanos</option>
+                        <option>Jurídico</option>
+                        <option>Comercial</option>
+                        <option>Diretoria</option>
+                    </select>
+                </div>
+            </fieldset> 
+        
+        <div class="campo4">
+            <div class="campo4-nivel">
+                <br>
+                <label for="nivel"><strong>Nivel de Prioridade: </strong></label>
+                <select id="nivel" required>
+                 <option selected disabled value="">Selecione</option>
+                 <option>Baixa</option>
+                 <option>Medio</option>
+                 <option>Alto</option>
+                 <option>ME AJUDAR PELO AMOR DE DEUS!!!</option>
+                </select>
+                <br>
+                <label for="tipo-problema"><strong>Selecione o problema:</strong></label>
+                <select id="tipo" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option>Problema Sistema ERP</option>
+                    <option>Problema Computador</option>
+                    <option>Problema Impressora</option>
+                    <option>Meu problema não está aqui</option>
+                </select>
+            </div>    
+        </div>
+
+        <!-- Caixa de texto -->
+        <div class="campo-descrito">
+            <div class="campo-descreva">
+                <br>
+                <label for="experiencia"><strong>Descreva o problema</strong></label>
+            </div>
+            <textarea class = "textarea1"rows="8" style="width: 41em" id="experiencia" name="experiencia" placeholder="Descreva aqui ..."></textarea>
+            <input type="file" id="MyFile"/>
+        </div>
+
+        <!-- Botão para enviar o formulário -->
+        <button class="botao" type="submit" onclick="capturar()">ABRIR TICKET</button> 
+    </form>
+    <br>
+<script type="text/javascript" src="js/chamado.js"></script>
+</ul>
+</html>
